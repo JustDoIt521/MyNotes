@@ -3,7 +3,7 @@
         <h1>{{msg}}</h1>
         <h2>{{localUser}}</h2>
         <div class='formArea'>
-            title:<input class='input-group'type="text" v-model="title"/>
+            title:<input class='input-group' type="text" v-model="title"/>
             <br/>
             Content:<input class='input-group' type="text" v-model="content"/>
             <br/>
@@ -11,6 +11,7 @@
     </div>
 </template>
 <script>
+    //import {mapGetters} from 'vuex'
     export default ({
         name: 'notes',
         data() {
@@ -21,6 +22,11 @@
                 content: ""
             }
         },
+        // created:{
+        //     ...mapGetters([
+        //         'todoList'
+        //     ])
+        // },
         watch: {
             $route(to, from) {
                 this.localUser = to.params.localUser

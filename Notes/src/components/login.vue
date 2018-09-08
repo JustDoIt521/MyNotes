@@ -1,10 +1,10 @@
 <template>
-    <div class="login">
+    <div id="login">
         <span class="chaStyle">UserName</span> 
-        <input type="text" class="userStyle" v-model="userName" placeholder="Enter the userName"/>
+        <input type="text" class="input-group" v-model="userName" placeholder="Enter the userName"/>
         <br/>
         <span class="chaStyle">Password</span>
-        <input type="password" class="userStyle" style="margin-top:10px;" v-model="password"/> 
+        <input type="password" class="input-group" style="margin-top:10px;" v-model="password"/> 
         <br/>
         <div class="loginButton" v-on:click="userLogin()">
             <span>Login</span>
@@ -20,9 +20,11 @@
                 msg: "users login",
                 localUser: "1",
                 localPassword: "1",
-                userName: "",
-                password: ""
+                userName: '',
+                password: ''
             };
+        },
+        created:{
         },
         methods: {
             userLogin: function() {

@@ -20,7 +20,7 @@ export default new Router({
         component:login
     },{
         name:'notes',
-        path:'/path',
+        path:'/notes',
         components:{
             default:notes,
             listDetail:listDetail,

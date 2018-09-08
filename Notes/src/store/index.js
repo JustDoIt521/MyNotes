@@ -3,8 +3,19 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
-    state: {
-        show: "helloWorld"
+var state={
+    todoList:[]
+}
+
+var getters={
+    count(state){
+        return {
+            state.todoList
+        }
     }
+}
+
+export default new Vuex.Store({
+    state,
+    getters
 })
