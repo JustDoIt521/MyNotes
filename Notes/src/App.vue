@@ -1,7 +1,7 @@
 <template>
   <div id="app">
       <div class="notesWhole">
-            <router-view name='listDetail'></router-view>
+            <router-view name='listShow'></router-view>
             <!-- <router-view/> -->
             <!-- <listShow></listShow> -->
             <div class='logoInput'>
@@ -9,7 +9,7 @@
                 <router-view/>
             </div>
             <!-- <listDetail></listDetail> -->
-            <router-view name='listShow'></router-view>
+            <router-view name='listDetail'></router-view>
       </div>
   </div>
 </template>

@@ -1,11 +1,23 @@
 <template>
     <div class='listDetail'>
-        titleDetail:<input class='input-group'type="text" />
+        titleDetail:<span>{{showContent.title}}</span>
         <br/>
-        Content:<input class='input-group' type="text" />
+        Content:<span>{{showContent.content}}</span>
         <br/>
     </div>
 </template>
+<script>
+import {mapGetters} from 'vuex'
+export default {
+    name:'listDetail',
+    computed:{
+        ...mapGetters([
+            'showContent'
+        ])
+    }
+}
+</script>
+
 <style>
     .listDetail {
         background: #1E90FF;

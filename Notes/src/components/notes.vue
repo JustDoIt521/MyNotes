@@ -7,11 +7,12 @@
             <br/>
             Content:<input class='input-group' type="text" v-model="content"/>
             <br/>
+            <button v-on:click="newToDo()">newToDo</button>
         </div>
     </div>
 </template>
 <script>
-    //import {mapGetters} from 'vuex'
+    import {mapMutations} from 'vuex'
     export default ({
         name: 'notes',
         data() {
@@ -31,6 +32,19 @@
             $route(to, from) {
                 this.localUser = to.params.localUser
                 console.log("noteVue")
+            }
+        },
+        methods:{
+            ...mapMutations([
+                'updateData'
+            ]),
+            newToDo:function(){
+                let param={
+                    title:this.title,
+                    content:this.content
+                }
+                console.log(param)
+                this.updateData(param)
             }
         }
     })
