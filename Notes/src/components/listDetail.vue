@@ -1,9 +1,6 @@
 <template>
     <div class='listDetail'>
-        titleDetail:<span>{{showContent.title}}</span>
-        <br/>
-        Content:<span>{{showContent.content}}</span>
-        <br/>
+        <p>{{showContent.content}}</p>
     </div>
 </template>
 <script>
@@ -20,8 +17,18 @@ export default {
 
 <style>
     .listDetail {
-        background: #1E90FF;
+        background: #EEEEEE;
         width: 30%;
         height: 100%;
+    }
+    p{
+        width:100%;
+        height:500px;
+        padding-left:10px;
+        padding-right:10px;
+        padding-top:20px;
+        word-wrap:break-word;
+        text-align:justify;
+        overflow-y: hidden;
     }
 </style>

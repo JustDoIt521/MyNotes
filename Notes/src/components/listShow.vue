@@ -1,10 +1,10 @@
 <template>
     <div class='listShow'>
         <li v-for="(item,index) in todoList" v-on:click="toShowContent(index)">
-            titleShow:<span>{{item.title}}</span>
-            <br/>
-             Content:<span>{{item.content}}</span>
-            <br/>
+            <span class='listTitle'>{{item.title}}</span>
+            <!-- <br/>
+             Content:<span class='testLine'>{{item.content}}</span>
+            <br/> -->
         </li>
     </div>
 </template>
@@ -50,8 +50,27 @@
 </script>
 <style>
     .listShow {
-        background: #1E90FF;
+        background: #EEEEEE;
         width: 30%;
         height: 100%;
+    }
+    .testLine{
+        width:100%;
+        text-align:center;
+        word-break: break-all;
+        /* word-wrap:break-word;  */
+        /* white-space:nowarp; */
+        /* text-overflow: ellipsis; */
+    }
+    li{
+        width:100%;
+        line-height:50px;
+        font-size:20px;
+        list-style:none;
+        text-align:center;
+        border-bottom:1px solid  #DDDDDD;
+    }
+    li:hover{
+        color:blue;
     }
 </style>
